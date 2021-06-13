@@ -1,0 +1,22 @@
+name: build
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: build & publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Docker login
+        run: echo ${{ secrets.CONTAINER_REGISTRY_KEY }} | docker login --username json_key --password-stdin cr.yandex
+
+      - name: Docker build
+        run: docker build . --tag cr.yandex/crpmoh45s6vnpdu1n8p7/demo-app:latest
+
+      - name: Docker push
+        run: docker push cr.yandex/crpmoh45s6vnpdu1n8p7/demo-app:latest
