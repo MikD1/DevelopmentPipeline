@@ -20,7 +20,7 @@ jobs:
           password: ${{ secrets.CONTAINER_REGISTRY_KEY }}
 
       - name: Docker build
-        run: docker build . --tag cr.yandex/crpmoh45s6vnpdu1n8p7/demo-app:latest
+        run: docker build DemoApp/Dockerfile --tag cr.yandex/crpmoh45s6vnpdu1n8p7/demo-app:latest
 
       - name: Docker push
         run: docker push cr.yandex/crpmoh45s6vnpdu1n8p7/demo-app:latest
