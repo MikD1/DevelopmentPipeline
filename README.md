@@ -19,7 +19,9 @@
 
 ### Yandex Cloud resources
 
+- Container registry
 - Instance group
+- Container optimized image
 - Network Load Balancer
 - VPC network
 
