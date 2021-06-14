@@ -16,10 +16,11 @@ jobs:
           dotnet-version: "5.0.x"
 
       - name: Test
-        run: dotnet test --no-restore --verbosity normal
+        run: dotnet test DemoApp/DemoApp.sln --verbosity normal
 
   build:
     name: build & publish
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
