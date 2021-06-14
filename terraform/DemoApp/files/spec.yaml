@@ -1,0 +1,4 @@
+spec:
+  containers:
+    - name: demo-app
+      image: ${docker_image}
