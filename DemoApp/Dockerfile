@@ -3,9 +3,6 @@ WORKDIR /app
 COPY . ./
 RUN dotnet restore
 
-WORKDIR /app/DemoApp.Tests
-RUN dotnet test --logger:trx
-
 WORKDIR /app/DemoApp.WebApi
 RUN dotnet publish -c Release -o out
 
