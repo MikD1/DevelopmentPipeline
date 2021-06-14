@@ -17,6 +17,12 @@
 7. Push image to container registry (auto)
 8. Update version in infrastructure description (auto|manually)
 
+### Yandex Cloud resources
+
+- Instance group
+- Network Load Balancer
+- VPC network
+
 ### How to run pipeline
 
 1. Create Yandex Cloud account: https://console.cloud.yandex.ru/
@@ -35,5 +41,5 @@ yc iam key create --service-account-name <service-account> -o key.json
 4. Install Terraform: https://learn.hashicorp.com/tutorials/terraform/install-cli
 ```
 terraform init
-terraform apply -var yc_folder=<folder> -var yc_token=<oauth_token>
+terraform apply -var yc_folder=<folder> -var yc_token=<oauth_token> -var user=<user_name>
 ```
