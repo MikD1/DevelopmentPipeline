@@ -24,6 +24,13 @@ namespace DemoApp.WebApi.Controllers
                 SecondName = "Petrova",
                 Phone = "+79169998877"
             },
+            
+            new()
+            {
+                FirstName = "Denis",
+                SecondName = "Samsonov",
+                Phone = "+79100001122"
+            },
         };
 
         public static Guid Id = System.Guid.NewGuid();
